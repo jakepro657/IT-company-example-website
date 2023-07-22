@@ -113,7 +113,7 @@ export default function Background() {
                 <source src="/vision.mp4" type="video/mp4" />
             </CustomVideo>
             <StyledDiv fontSize={5} left={8} top={18}>
-                혁신, 그 넘어.
+                IT의 혁신, 그 넘어.
             </StyledDiv>
             <StyledDiv fontSize={2} left={8} top={24}>
                 새로운 미래를 만들다.

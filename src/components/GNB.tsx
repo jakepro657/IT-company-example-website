@@ -16,12 +16,13 @@ const UlRoot = styled.ul`
 
   user-select: none;
   color: white;
+  background: rgba(0, 0, 0, 0.1);
+
   @media (min-width: 992px) {
     padding: 32px;
     /* 데스크톱 스타일 */
     display: flex;
     justify-content: space-evenly;
-    background: transparent;
 
 
     ul {
