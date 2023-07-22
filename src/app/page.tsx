@@ -3,6 +3,7 @@ import GNB from "@/components/GNB";
 import Background from "@/components/Background";
 import styled from "styled-components";
 import './globals.css'
+import Footer from "@/components/Footer";
 
 const PageContainer = styled.div`
   min-height: 200vh;  // Adjust based on your total content height
@@ -14,7 +15,7 @@ const VideoContainer = styled.div`
 `;
 const ContentAfterVideo = styled.div`
   height: 100vh;  // Adjust based on your content after video
-  background: white;
+  background: lightgray;
 `;
 
 export default function Home() {
@@ -25,8 +26,8 @@ export default function Home() {
                 <GNB />
             </VideoContainer>
             <ContentAfterVideo>
-                
             </ContentAfterVideo>
+            <Footer/>
         </PageContainer>
     );
 };
