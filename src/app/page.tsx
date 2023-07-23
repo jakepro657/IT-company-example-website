@@ -44,8 +44,34 @@ const ContentBlockHalf = styled.div`
 `
 
 const FirstContainer = styled.div`
+
+  &:hover {
+    transition: 0.4s ease-in-out;
+    width: 28vw;
+    height: 68vh;
+    button {
+      display: flex;
+      transition: 0.4s ease-in-out;
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      animation: fadeInUp 0.5s ease-in-out;
+    }
+  }
+  
+  transition: 0.4s ease-in-out;
+
   display: flex;
-  justify-content: center;width: 24vw;
+  justify-content: center;
+  width: 24vw;
   height: 64vh;
   border: solid gray 2px;
   border-radius: 64px 16px 64px 16px;
@@ -53,13 +79,14 @@ const FirstContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
 `
 
 const FirstContainerWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  
 `
 
 const TitleContainer = styled.div`
@@ -89,9 +116,21 @@ const Title = styled.div`
   font-size: 3rem;
   color: white;
   align-self: end;
-  margin-bottom: 3rem;
+  margin-bottom: 24vh;
 `
+const StyledButton = styled.button`
+  
+  font-family: "Pretendard-Regular";
 
+  color: white;
+  border: solid white;
+  padding: 8px 64px 8px 64px;
+  border-radius: 32px;
+  bottom: 22vh;
+  position: absolute;
+  display: none;
+  
+`
 
 export default function Home() {
     return (
@@ -107,20 +146,23 @@ export default function Home() {
                         <ContentSubtitle>혁신적인 기술을 바탕으로 새로운 시작에 향합니다</ContentSubtitle>
                     </TitleContainer>
                     <FirstContainerWrap>
-                        <FirstContainer image={"/programming.png"}>
-                            <Title>
-                                신기술개발
-                            </Title>
-                        </FirstContainer>
                         <FirstContainer image={"/ai.jpg"}>
                             <Title>
                                 AI모델 개발
                             </Title>
+                            <StyledButton>더보기</StyledButton>
+                        </FirstContainer>
+                        <FirstContainer image={"/cloud.jpg"}>
+                            <Title>
+                                클라우드 개발
+                            </Title>
+                            <StyledButton>더보기</StyledButton>
                         </FirstContainer>
                         <FirstContainer image={"/light.jpg"}>
                             <Title>
                                 전문도급
                             </Title>
+                            <StyledButton>더보기</StyledButton>
                         </FirstContainer>
                     </FirstContainerWrap>
                 </ContentBlock>
