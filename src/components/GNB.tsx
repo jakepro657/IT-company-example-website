@@ -16,7 +16,7 @@ const UlRoot = styled.ul`
 
   user-select: none;
   color: white;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 
   @media (min-width: 992px) {
     padding: 32px;
@@ -37,20 +37,23 @@ const UlRoot = styled.ul`
       margin-top: 12px;
 
       &:hover {
-        color: gray;
+        //color: gray;
+        color: darkgray;
       }
     }
 
     &:hover {
-      background: white;
+      //background: white;
+      background: rgba(0, 0, 0, 0.4);
       transition: 0.4s ease-in-out;
-      color: black;
+      //color: black;
       height: 32vh;
 
       li > ul {
         display: flex;
         flex-direction: column;
-        color: darkgray;
+        //color: darkgray;
+        color: white;
       }
     }
   }

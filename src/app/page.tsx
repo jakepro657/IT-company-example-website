@@ -37,24 +37,29 @@ const ContentBlockHalf = styled.div`
   user-select: none;
   position: absolute;
   min-height: 100vh;
-  left: ${props => props.isLeft ? 0 : 50}%;
-  right: ${props => props.isLeft ? 50 : 0}%;
+  left: ${props => props.left ? 0 : 50}%;
+  right: ${props => props.left ? 50 : 0}%;
   background-color: white;
   width: ${props => props.width}%;
 `
 
 const FirstContainer = styled.div`
-  width: 16vw;
+  display: flex;
+  justify-content: center;width: 24vw;
   height: 64vh;
-  color: white;
   border: solid gray 2px;
   border-radius: 64px 16px 64px 16px;
+  background-image: url(${props => props.image});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `
 
 const FirstContainerWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
 `
 
 const TitleContainer = styled.div`
@@ -79,6 +84,15 @@ const ContentSubtitle = styled.div`
   font-size: 1.25rem;
 `
 
+const Title = styled.div`
+  user-select: none;
+  font-size: 3rem;
+  color: white;
+  align-self: end;
+  margin-bottom: 3rem;
+`
+
+
 export default function Home() {
     return (
         <PageContainer>
@@ -87,46 +101,49 @@ export default function Home() {
                 <GNB/>
             </VideoContainer>
             <ContentAfterVideo>
-                <ContentBlock full={true} width={100}>
+                <ContentBlock full={"true"} width={100}>
                     <TitleContainer>
-                        <ContentTitle>더 나은 기술로, 너 나은 세상으로.</ContentTitle>
+                        <ContentTitle>더 나은 기술로, 너 나은 세상으로</ContentTitle>
                         <ContentSubtitle>혁신적인 기술을 바탕으로 새로운 시작에 향합니다</ContentSubtitle>
                     </TitleContainer>
                     <FirstContainerWrap>
-                        <FirstContainer>
-
+                        <FirstContainer image={"/programming.png"}>
+                            <Title>
+                                신기술개발
+                            </Title>
                         </FirstContainer>
-                        <FirstContainer>
-
+                        <FirstContainer image={"/ai.jpg"}>
+                            <Title>
+                                AI모델 개발
+                            </Title>
                         </FirstContainer>
-                        <FirstContainer>
-
-                        </FirstContainer>
-                        <FirstContainer>
-
+                        <FirstContainer image={"/light.jpg"}>
+                            <Title>
+                                전문도급
+                            </Title>
                         </FirstContainer>
                     </FirstContainerWrap>
                 </ContentBlock>
             </ContentAfterVideo>
             <ContentAfterVideo>
-                <ContentBlockHalf isLeft={false} width={50}>
+                <ContentBlockHalf left={"false"} width={50}>
                 </ContentBlockHalf>
             </ContentAfterVideo>
             <ContentAfterVideo>
-                <ContentBlockHalf isLeft={true} width={50}>
+                <ContentBlockHalf left={"true"} width={50}>
                 </ContentBlockHalf>
             </ContentAfterVideo>
             <ContentAfterVideo>
-                <ContentBlockHalf isLeft={false} width={50}>
+                <ContentBlockHalf left={"false"} width={50}>
                 </ContentBlockHalf>
             </ContentAfterVideo>
             <ContentAfterVideo>
-                <ContentBlock full={true} width={100}>
+                <ContentBlock full={"true"} width={100}>
 
                 </ContentBlock>
             </ContentAfterVideo>
             <ContentAfterVideo>
-                <ContentBlock full={true} width={100}>
+                <ContentBlock full={"true"} width={100}>
 
                 </ContentBlock>
             </ContentAfterVideo>
