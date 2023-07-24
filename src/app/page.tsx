@@ -6,6 +6,7 @@ import './globals.css'
 import Footer from "@/components/Footer";
 import FirstBlock from "@/components/FirstBlock";
 import SecondBlock from "@/components/SecondBlock";
+import ThirdBlock from "@/components/ThirdBlock";
 
 const PageContainer = styled.div`
   min-height: 200vh; // Adjust based on your total content height
@@ -18,12 +19,12 @@ const VideoContainer = styled.div`
 
 const BlockContainer = styled.div`
   position: relative;
-  height: 128vh; // Adjust based on your content after video
+  height: ${props => props.height}vh; // Adjust based on your content after video
   background-color: white;
 `;
 
 const ContentBlockHalf = styled.div`
-  font-family: Pretendard-Regular;
+  font-family: KimjungchulGothic-Bold;
   user-select: none;
   position: absolute;
   min-height: 100%;
@@ -45,16 +46,17 @@ export default function Home() {
                 <Background/>
                 <GNB/>
             </VideoContainer>
-            <BlockContainer>
+            <BlockContainer height={128}>
                 <FirstBlock/>
             </BlockContainer>
-            <BlockContainer>
+            <BlockContainer height={128}>
                 <SecondBlock/>
             </BlockContainer>
-            <BlockContainer>
+            <BlockContainer height={48}>
+                <ThirdBlock/>
             </BlockContainer>
-            <BlockContainer>
-            </BlockContainer>
+            {/*<BlockContainer>*/}
+            {/*</BlockContainer>*/}
             <Footer/>
         </PageContainer>
     );

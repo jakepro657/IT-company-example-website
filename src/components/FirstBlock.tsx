@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const ContentBlock = styled.div`
-  font-family: Pretendard-Regular;
+  font-family: KimjungchulGothic-Bold;
+
   position: absolute;
   height: 100%;
   left: ${props => props.full ? 0 : 50}%;
@@ -13,7 +14,19 @@ const ContentBlock = styled.div`
   justify-content: space-evenly;
 `
 const FirstContainer = styled.div`
-
+  position: relative;
+  
+  &:before {
+    border-radius: 64px 16px 64px 16px;
+    content: "";
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+  }
   &:hover {
     transition: 0.2s ease-in-out;
     width: 28vw;
@@ -28,7 +41,7 @@ const FirstContainer = styled.div`
         }
         100% {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(0px);
         }
       }
 
@@ -85,26 +98,29 @@ const Title = styled.div`
   font-size: 3rem;
   color: white;
   align-self: center;
+  z-index: 10;
 `
 const Subtitle = styled.div`
   user-select: none;
   font-size: 1.5rem;
   color: white;
   align-self: center;
+  z-index: 10;
 `
 
 const StyledButton = styled.button`
   
-  font-family: "Pretendard-Regular";
+  font-family: KimjungchulGothic-Bold;
 
   color: white;
   border: solid white;
   padding: 8px 64px 8px 64px;
   border-radius: 32px;
-  bottom: 22vh;
+  bottom: 12vh;
   position: absolute;
   display: none;
   align-self: center;
+  z-index: 10;
   
 `
 

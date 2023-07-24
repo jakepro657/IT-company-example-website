@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 const ContentBlock = styled.div`
+  font-family: KimjungchulGothic-Bold;
 
   &:before {
     content: "";
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.64);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -2;
   }
   user-select: none;
-  font-family: Pretendard-Regular;
   position: absolute;
   height: 100%;
   left: ${props => props.full ? 0 : 50}%;
@@ -52,9 +52,21 @@ const FirstContainer = styled.div`
   //    animation: fadeInUp 0.5s ease-in-out;
   //  }
   //}
-
+  
   //transition: 0.4s ease-in-out;
+  position: relative;
 
+  &:before {
+    border-radius: 16px 64px 16px 64px;
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -64,9 +76,9 @@ const FirstContainer = styled.div`
   width: 32vh;
   height: 32vh;
   padding-bottom: 24px;
-  border: white solid;
+  border: white solid 6px;
   color: white;
-  border-radius: 64px 16px 64px 16px;
+  border-radius: 16px 64px 16px 64px;
   background-repeat: no-repeat;
   background-image: url(${props => props.image});
   background-position: center;

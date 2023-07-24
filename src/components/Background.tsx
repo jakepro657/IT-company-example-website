@@ -20,9 +20,9 @@ import styled from "styled-components";
 //
 
 const StyledButton = styled.button`
-  
-  font-family: "Pretendard-Regular";
-  
+
+  font-family: KimjungchulGothic-Bold;
+
   @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -37,7 +37,7 @@ const StyledButton = styled.button`
   animation: fadeInUp 0.5s ease-in-out;
   color: white;
   border: solid white;
-  padding: 8px 64px 8px 64px;
+  padding: 8px 32px 8px 32px;
   border-radius: 32px;
   font-size: ${props => props.fontSize}rem;
   position: absolute;
@@ -53,9 +53,10 @@ const StyledButton = styled.button`
 `
 
 const StyledDiv = styled.div`
-  
-  font-family: "Pretendard-Regular";
-  
+
+  font-family: KimjungchulGothic-Bold;
+
+
   @keyframes fadeInUp {
     0% {
       opacity: 0;
