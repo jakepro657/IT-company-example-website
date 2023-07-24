@@ -19,7 +19,7 @@ const VideoContainer = styled.div`
 const BlockContainer = styled.div`
   position: relative;
   height: 128vh; // Adjust based on your content after video
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: white;
 `;
 
 const ContentBlockHalf = styled.div`
@@ -50,6 +50,10 @@ export default function Home() {
             </BlockContainer>
             <BlockContainer>
                 <SecondBlock/>
+            </BlockContainer>
+            <BlockContainer>
+            </BlockContainer>
+            <BlockContainer>
             </BlockContainer>
             <Footer/>
         </PageContainer>

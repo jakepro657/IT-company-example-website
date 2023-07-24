@@ -20,11 +20,11 @@ const FirstContainer = styled.div`
     height: 68vh;
     button {
       display: flex;
-      transition: 0.2s ease-in-out;
+      transition: 0.4s ease-in-out;
       @keyframes fadeInUp {
         0% {
           opacity: 0;
-          transform: translateY(10px);
+          transform: translateY(5px);
         }
         100% {
           opacity: 1;
@@ -32,7 +32,7 @@ const FirstContainer = styled.div`
         }
       }
 
-      animation: fadeInUp 0.5s ease-in-out;
+      animation: fadeInUp 0.4s ease-in-out;
     }
   }
 

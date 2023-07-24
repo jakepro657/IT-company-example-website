@@ -66,11 +66,42 @@ const UlRoot = styled.ul`
 
 `;
 
+const InlineSpan = styled.span`
+  display: flex;
+  justify-content: space-evenly;
+  svg {
+    margin-right: 8px;
+  }
+`
 export const GNB = () => {
 
     return (
         <Navbar>
             <UlRoot>
+                <InlineSpan>
+                    <svg
+                        width="40"
+                        height="25"
+                        viewBox="0 0 75 70"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12.7391 56.9863L1 44.6575L12.7391 33.1507L25.6927 20H36.8246H47.9565L25.6927 44.6575L47.9565 69.3151H25.6927L12.7391 56.9863Z"
+                            fill="aquamarine"
+                            stroke="aquamarine"
+                        />
+                        <path
+                            d="M62.8587 20H55.7283L33 44H53.5L65 29.5H74V20H62.8587Z"
+                            fill="aquamarine"
+                            stroke="aquamarine"
+                        />
+                        <circle cx="37" cy="8" r="8" fill="aquamarine"/>
+                    </svg>
+                    <span>
+                        MIRAE IT Corp.
+                    </span>
+                </InlineSpan>
                 <li>
                     회사소개
                     <ul>

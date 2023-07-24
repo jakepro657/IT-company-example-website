@@ -106,6 +106,7 @@ const CustomVideo = styled.video`
   object-fit: cover;
 `;
 
+
 export default function Background() {
     return (
         <VideoContainer>
