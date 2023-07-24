@@ -5,6 +5,7 @@ import styled from "styled-components";
 import './globals.css'
 import Footer from "@/components/Footer";
 import FirstBlock from "@/components/FirstBlock";
+import SecondBlock from "@/components/SecondBlock";
 
 const PageContainer = styled.div`
   min-height: 200vh; // Adjust based on your total content height
@@ -48,7 +49,7 @@ export default function Home() {
                 <FirstBlock/>
             </BlockContainer>
             <BlockContainer>
-                <SecondContainer/>
+                <SecondBlock/>
             </BlockContainer>
             <Footer/>
         </PageContainer>
