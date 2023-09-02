@@ -12,16 +12,15 @@ const StyledFooter = styled.footer`
   
   
   font-size: 0.9rem;
-  background-color: white;
   min-height: 32vh;
   color: darkgray;
 `
 
 const StyledDiv = styled.div`
   font-family: Pretendard-Regular;
-  color: darkgray;
+  color: white;
+
   font-size: 2rem;
-  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,13 +29,14 @@ const StyledDiv = styled.div`
 
 const InlineDiv = styled.div`
   margin-inline: 2vw;
+  user-select: none;
 `
 
 const RootContainer = styled.div`
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: white;
 `
 
 export default function Footer() {

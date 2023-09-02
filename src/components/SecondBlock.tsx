@@ -1,7 +1,10 @@
 import styled from "styled-components";
-
-const ContentBlock = styled.div`
-  font-family: KimjungchulGothic-Bold;
+interface ContentBlockProps {
+    width: number;
+    image: string;
+}
+const ContentBlock = styled.div<ContentBlockProps>`
+  font-family: Pretendard-Regular;
 
   &:before {
     content: "";
@@ -11,13 +14,11 @@ const ContentBlock = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -2;
+    z-index: 0;
   }
   user-select: none;
   position: absolute;
   height: 100%;
-  left: ${props => props.full ? 0 : 50}%;
-  transform: ${props => props.full ? "translateX(0)" : "translateX(-50%)"};
   width: ${props => props.width}%;
   display: flex;
   flex-direction: column;
@@ -28,32 +29,12 @@ const ContentBlock = styled.div`
   background-size: cover;
 `
 
+interface FirstContainerProps {
+    image: string;
+}
 
-const FirstContainer = styled.div`
+const FirstContainer = styled.div<FirstContainerProps>`
 
-  //&:hover {
-  //  transition: 0.2s ease-in-out;
-  //  width: 28vw;
-  //  height: 68vh;
-  //  button {
-  //    display: flex;
-  //    transition: 0.2s ease-in-out;
-  //    @keyframes fadeInUp {
-  //      0% {
-  //        opacity: 0;
-  //        transform: translateY(10px);
-  //      }
-  //      100% {
-  //        opacity: 1;
-  //        transform: translateY(0);
-  //      }
-  //    }
-  //
-  //    animation: fadeInUp 0.5s ease-in-out;
-  //  }
-  //}
-  
-  //transition: 0.4s ease-in-out;
   position: relative;
 
   &:before {
@@ -111,6 +92,7 @@ const ContentTitle = styled.div`
   font-size: 2.5rem;
   color: white;
   border-radius: 32px;
+  z-index: 1;
 `
 const ContentSubtitle = styled.div`
   @supports (backdrop-filter: blur(5px)) {
@@ -129,7 +111,7 @@ const ContentSubtitle = styled.div`
 
 export default function SecondBlock() {
     return (
-        <ContentBlock full={"true"} width={100} image={'code.jpg'}>
+        <ContentBlock width={100} image={'code.jpg'}>
             <TitleContainer>
                 <ContentTitle>미래IT는 검증되었습니다</ContentTitle>
                 <ContentSubtitle>이미 수많은 클라이언트분과 함께했습니다</ContentSubtitle>

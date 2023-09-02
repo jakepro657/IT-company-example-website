@@ -1,12 +1,16 @@
 "use client"
 import GNB from "@/components/GNB";
-import Background from "@/components/Background";
 import styled from "styled-components";
 import './globals.css'
 import Footer from "@/components/Footer";
 import FirstBlock from "@/components/FirstBlock";
 import SecondBlock from "@/components/SecondBlock";
-import ThirdBlock from "@/components/ThirdBlock";
+import NoticeBlock from "@/components/NoticeBlock";
+import Background from "@/components/Background";
+
+interface BlockContainerProps {
+    height: number;
+}
 
 const PageContainer = styled.div`
   min-height: 200vh; // Adjust based on your total content height
@@ -17,14 +21,14 @@ const VideoContainer = styled.div`
   width: 100%;
 `;
 
-const BlockContainer = styled.div`
+const BlockContainer = styled.div<BlockContainerProps>`
   position: relative;
   height: ${props => props.height}vh; // Adjust based on your content after video
   background-color: white;
 `;
 
 const ContentBlockHalf = styled.div`
-  font-family: KimjungchulGothic-Bold;
+  font-family: Pretendard-Regular;
   user-select: none;
   position: absolute;
   min-height: 100%;
@@ -53,7 +57,7 @@ export default function Home() {
                 <SecondBlock/>
             </BlockContainer>
             <BlockContainer height={48}>
-                <ThirdBlock/>
+                <NoticeBlock/>
             </BlockContainer>
             {/*<BlockContainer>*/}
             {/*</BlockContainer>*/}

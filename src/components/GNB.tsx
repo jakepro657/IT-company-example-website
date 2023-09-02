@@ -12,7 +12,7 @@ const Navbar = styled.nav`
 `;
 
 const UlRoot = styled.ul`
-  font-family: KimjungchulGothic-Bold;
+  font-family: Pretendard-Regular;
 
   user-select: none;
   color: white;

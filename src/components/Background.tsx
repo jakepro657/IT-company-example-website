@@ -18,10 +18,14 @@ import styled from "styled-components";
 //   object-fit: cover;
 // `
 //
+interface StyledButtonProps {
+    fontSize: number;
+    left: number;
+    top: number;
+}
+const StyledButton = styled.button<StyledButtonProps>`
 
-const StyledButton = styled.button`
-
-  font-family: KimjungchulGothic-Bold;
+  font-family: Pretendard-Regular;
 
   @keyframes fadeInUp {
     0% {
@@ -52,9 +56,9 @@ const StyledButton = styled.button`
   }
 `
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<StyledButtonProps>`
 
-  font-family: KimjungchulGothic-Bold;
+  font-family: Pretendard-Regular;
 
 
   @keyframes fadeInUp {
@@ -121,7 +125,7 @@ export default function Background() {
                 새로운 미래를 만들다
             </StyledDiv>
             <StyledButton fontSize={1} left={8} top={32}>
-                둘러보기 >
+                둘러보기 &gt
             </StyledButton>
         </VideoContainer>
     );

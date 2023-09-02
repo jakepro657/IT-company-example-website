@@ -1,19 +1,25 @@
 import styled from "styled-components";
 
-const ContentBlock = styled.div`
-  font-family: KimjungchulGothic-Bold;
+interface PropsContentBlock {
+    width: number;
+}
+
+interface FirstContainerProps {
+    image: string;
+}
+
+const ContentBlock = styled.div<PropsContentBlock>`
+  font-family: Pretendard-Regular;
 
   position: absolute;
   height: 100%;
-  left: ${props => props.full ? 0 : 50}%;
-  transform: ${props => props.full ? "translateX(0)" : "translateX(-50%)"};
   background-color: white;
   width: ${props => props.width}%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 `
-const FirstContainer = styled.div`
+const FirstContainer = styled.div<FirstContainerProps>`
   position: relative;
   
   &:before {
@@ -29,8 +35,8 @@ const FirstContainer = styled.div`
   }
   &:hover {
     transition: 0.2s ease-in-out;
-    width: 28vw;
-    height: 68vh;
+    width: 30vw;
+    height: 70vh;
     button {
       display: flex;
       transition: 0.4s ease-in-out;
@@ -110,7 +116,7 @@ const Subtitle = styled.div`
 
 const StyledButton = styled.button`
   
-  font-family: KimjungchulGothic-Bold;
+  font-family: Pretendard-Regular;
 
   color: white;
   border: solid white;
@@ -126,9 +132,9 @@ const StyledButton = styled.button`
 
 export default function FirstBlock() {
     return (
-        <ContentBlock full={"true"} width={100}>
+        <ContentBlock width={100}>
             <TitleContainer>
-                <ContentTitle>더 나은 기술로, 너 나은 세상으로</ContentTitle>
+                <ContentTitle>더 나은 기술로, 더 나은 세상으로</ContentTitle>
                 <ContentSubtitle>혁신적인 기술을 바탕으로 새로운 시작에 향합니다</ContentSubtitle>
             </TitleContainer>
             <FirstContainerWrap>
