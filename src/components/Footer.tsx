@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
 
-  font-family: Pretendard-Regular;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -17,7 +16,6 @@ const StyledFooter = styled.footer`
 `
 
 const StyledDiv = styled.div`
-  font-family: Pretendard-Regular;
   color: white;
 
   font-size: 2rem;

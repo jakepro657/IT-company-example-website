@@ -13,6 +13,8 @@ interface BlockContainerProps {
 }
 
 const PageContainer = styled.div`
+  font-family: 'LINESeedKR-Bd';
+
   min-height: 200vh; // Adjust based on your total content height
 `;
 const VideoContainer = styled.div`
@@ -28,7 +30,6 @@ const BlockContainer = styled.div<BlockContainerProps>`
 `;
 
 const ContentBlockHalf = styled.div`
-  font-family: Pretendard-Regular;
   user-select: none;
   position: absolute;
   min-height: 100%;

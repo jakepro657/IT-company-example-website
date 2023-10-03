@@ -9,7 +9,6 @@ interface FirstContainerProps {
 }
 
 const ContentBlock = styled.div<PropsContentBlock>`
-  font-family: Pretendard-Regular;
 
   position: absolute;
   height: 100%;
@@ -21,7 +20,7 @@ const ContentBlock = styled.div<PropsContentBlock>`
 `
 const FirstContainer = styled.div<FirstContainerProps>`
   position: relative;
-  
+
   &:before {
     border-radius: 64px 16px 64px 16px;
     content: "";
@@ -36,7 +35,6 @@ const FirstContainer = styled.div<FirstContainerProps>`
   &:hover {
     transition: 0.2s ease-in-out;
     width: 30vw;
-    height: 70vh;
     button {
       display: flex;
       transition: 0.4s ease-in-out;
@@ -74,7 +72,7 @@ const FirstContainerWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
+
 `
 
 const TitleContainer = styled.div`
@@ -115,8 +113,7 @@ const Subtitle = styled.div`
 `
 
 const StyledButton = styled.button`
-  
-  font-family: Pretendard-Regular;
+
 
   color: white;
   border: solid white;
@@ -127,7 +124,7 @@ const StyledButton = styled.button`
   display: none;
   align-self: center;
   z-index: 10;
-  
+
 `
 
 export default function FirstBlock() {

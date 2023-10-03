@@ -4,7 +4,6 @@ interface ContentBlockProps {
     image: string;
 }
 const ContentBlock = styled.div<ContentBlockProps>`
-  font-family: Pretendard-Regular;
 
   &:before {
     content: "";
@@ -53,12 +52,13 @@ const FirstContainer = styled.div<FirstContainerProps>`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 64px;
+  margin-inline: 16px;
   width: 32vh;
   height: 32vh;
   padding-bottom: 24px;
-  border: white solid 6px;
-  color: white;
+  background: white;
+  color: black;
   border-radius: 16px 64px 16px 64px;
   background-repeat: no-repeat;
   background-image: url(${props => props.image});
@@ -72,7 +72,7 @@ const FirstContainerWrap = styled.div`
   align-items: stretch;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 68vw;
+  width: 72vw;
   height: 72vh;
 `
 

@@ -24,8 +24,7 @@ interface StyledButtonProps {
     top: number;
 }
 const StyledButton = styled.button<StyledButtonProps>`
-
-  font-family: Pretendard-Regular;
+  
 
   @keyframes fadeInUp {
     0% {
@@ -57,8 +56,6 @@ const StyledButton = styled.button<StyledButtonProps>`
 `
 
 const StyledDiv = styled.div<StyledButtonProps>`
-
-  font-family: Pretendard-Regular;
 
 
   @keyframes fadeInUp {
@@ -125,7 +122,7 @@ export default function Background() {
                 새로운 미래를 만들다
             </StyledDiv>
             <StyledButton fontSize={1} left={8} top={32}>
-                둘러보기 &gt
+                둘러보기 &gt;
             </StyledButton>
         </VideoContainer>
     );

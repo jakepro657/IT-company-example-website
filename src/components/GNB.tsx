@@ -12,7 +12,6 @@ const Navbar = styled.nav`
 `;
 
 const UlRoot = styled.ul`
-  font-family: Pretendard-Regular;
 
   user-select: none;
   color: white;

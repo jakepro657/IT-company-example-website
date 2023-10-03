@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const NoticeContainer = styled.div`
-  font-family: Pretendard-Regular;
   
   justify-content: space-evenly;
   display: flex;
